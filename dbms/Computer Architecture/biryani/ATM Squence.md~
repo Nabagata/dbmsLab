@@ -1,0 +1,1677 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.3.0407.2800"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"59A927280013"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"59A927280015"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"59A92728001C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"59A927280014"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"59A927280016"
+	logical_models 	(list unit_reference_list
+	    (object Class "NewClass"
+		quid       	"59A92735019A")
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "A:ATM"
+			quid       	"59A927DA013C"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"59A9291201C1"
+				supplier   	"B:Bank"
+				quidu      	"59A9282202F0"
+				messages   	(list Messages
+				    (object Message "Verify PIN"
+					quid       	"59A9291201C2"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1"
+					ordinal    	5
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "PIN Correct"
+					quid       	"59A92A16036B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2"
+					ordinal    	7
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Process Transaction"
+					quid       	"59A92A7D0097"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1"
+					ordinal    	12
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Transaction Sucessfull"
+					quid       	"59A92BED0346"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2"
+					ordinal    	15
+					quidu      	"000000000000"
+					creation   	FALSE)))
+			    (object Link
+				quid       	"59A92AB703C1"
+				supplier   	"A:ATM"
+				quidu      	"59A927DA013C"
+				messages   	(list Messages
+				    (object Message "Card Verification"
+					quid       	"59A92AB703C2"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"1.1"
+					ordinal    	1
+					quidu      	"000000000000"
+					creation   	FALSE))))
+			persistence 	"Transient"
+			creationObj 	TRUE
+			multi      	FALSE)
+		    (object Object "C:ATM Customer"
+			quid       	"59A9281801F6"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"59A928760168"
+				supplier   	"A:ATM"
+				quidu      	"59A927DA013C"
+				messages   	(list Messages
+				    (object Message "Insert Card"
+					quid       	"59A928760169"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"1"
+					ordinal    	0
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Acknowlegdement"
+					quid       	"59A9288A009C"
+					frequency  	"Aperiodic"
+					synchronization 	"Return"
+					dir        	"ToClientFromSupplier"
+					sequence   	"1.2"
+					ordinal    	2
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Welcome Greeting"
+					quid       	"59A928B100AB"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2"
+					ordinal    	3
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Enter PIN"
+					quid       	"59A92907028D"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1"
+					ordinal    	4
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Request option"
+					quid       	"59A92A360146"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1"
+					ordinal    	8
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Option Entered"
+					quid       	"59A92A4802EB"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1"
+					ordinal    	9
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Request Amount"
+					quid       	"59A92A5E03D4"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1"
+					ordinal    	10
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Amount Entered"
+					quid       	"59A92A6C03E3"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1.1.1"
+					ordinal    	11
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Cash Withdrawal"
+					quid       	"59A92C1103D1"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.1"
+					ordinal    	16
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Continue"
+					quid       	"59A92C36013F"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.2"
+					ordinal    	17
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Terminate"
+					quid       	"59A92C4201BC"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.2.2"
+					ordinal    	21
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Print Reciept"
+					quid       	"59A92C4C0064"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.2.2.1"
+					ordinal    	22
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Continue"
+					quid       	"59A92E250222"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.3"
+					ordinal    	20
+					quidu      	"000000000000"
+					creation   	FALSE)))
+			    (object Link
+				quid       	"59A92E0801D6"
+				supplier   	"ATM Transaction"
+				quidu      	"59A92D9A0249"
+				messages   	(list Messages
+				    (object Message "Modifications"
+					quid       	"59A92E0801D7"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.2.1"
+					ordinal    	18
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Terminate"
+					quid       	"59A92E1A0242"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.2.2.1.1"
+					ordinal    	19
+					quidu      	"000000000000"
+					creation   	FALSE))))
+			persistence 	"Transient"
+			creationObj 	TRUE
+			multi      	FALSE)
+		    (object Object "B:Bank"
+			quid       	"59A9282202F0"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"59A92AA6018F"
+				supplier   	"B:Bank"
+				quidu      	"59A9282202F0"
+				messages   	(list Messages
+				    (object Message "Pin correct"
+					quid       	"59A92AA60190"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.1"
+					ordinal    	6
+					quidu      	"000000000000"
+					creation   	FALSE)))
+			    (object Link
+				quid       	"59A92D310117"
+				supplier   	"Account"
+				quidu      	"59A92D0E00D9"
+				messages   	(list Messages
+				    (object Message "Checking Account"
+					quid       	"59A92D310118"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.1"
+					ordinal    	13
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "Account Succfull Checked"
+					quid       	"59A92D4601F0"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2.1.1.2.1.1.1.1.1.1.1"
+					ordinal    	14
+					quidu      	"000000000000"
+					creation   	FALSE))))
+			persistence 	"Transient"
+			creationObj 	TRUE
+			multi      	FALSE)
+		    (object Object "Account"
+			quid       	"59A92D0E00D9"
+			persistence 	"Transient"
+			creationObj 	TRUE
+			multi      	FALSE)
+		    (object Object "ATM Transaction"
+			quid       	"59A92D9A0249"
+			persistence 	"Transient"
+			creationObj 	TRUE
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"59A92728001A"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::NewClass" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(678, 275)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(564, 224)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	228
+			    justify    	0
+			    label      	"NewClass")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A92735019A"
+			width      	246
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"59A927D700BF"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	1257
+		items      	(list diagram_item_list
+		    (object InterObjView "A:ATM" @3
+			location   	(588, 297)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(588, 297)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"A:ATM")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A927DA013C"
+			width      	300
+			height     	2781
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(588, 377)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	108
+			    y_coord    	18
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(588, 425)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	235
+			    y_coord    	145
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(588, 555)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	90
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(588, 765)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	165
+			    y_coord    	75
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(588, 870)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	460
+			    y_coord    	370
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @9
+			    location   	(588, 1270)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	270
+			    y_coord    	180
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(588, 1480)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	270
+			    y_coord    	180
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @11
+			    location   	(588, 1690)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	533
+			    y_coord    	443
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @12
+			    location   	(588, 2163)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	690
+			    y_coord    	600
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(588, 2793)
+			    line_color 	3342489
+			    InterObjView 	@3
+			    height     	195
+			    y_coord    	105
+			    Nested     	TRUE))
+		    (object InterObjView "C:ATM Customer" @14
+			location   	(1053, 297)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(1053, 297)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"C:ATM Customer")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A9281801F6"
+			width      	300
+			height     	2781
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1053, 377)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	448
+			    y_coord    	358
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(1053, 660)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(1053, 765)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	195
+			    y_coord    	105
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(1053, 1375)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	270
+			    y_coord    	180
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @19
+			    location   	(1053, 1585)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	195
+			    y_coord    	105
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(1053, 2268)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	165
+			    y_coord    	75
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(1053, 2373)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	585
+			    y_coord    	495
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @22
+			    location   	(1053, 2583)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	165
+			    y_coord    	75
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @23
+			    location   	(1053, 2688)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	90
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @24
+			    location   	(1053, 2898)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	90
+			    y_coord    	0
+			    Nested     	TRUE))
+		    (object InterObjView "ATM Transaction" @25
+			location   	(1516, 287)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@25
+			    location   	(1516, 287)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"ATM Transaction")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A92D9A0249"
+			width      	300
+			height     	2791
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @26
+			    location   	(1516, 367)
+			    line_color 	3342489
+			    InterObjView 	@25
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @27
+			    location   	(1516, 2478)
+			    line_color 	3342489
+			    InterObjView 	@25
+			    height     	195
+			    y_coord    	105
+			    Nested     	FALSE))
+		    (object InterObjView "B:Bank" @28
+			location   	(2019, 300)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(2019, 300)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"B:Bank")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A9282202F0"
+			width      	300
+			height     	2778
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @29
+			    location   	(2019, 380)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @30
+			    location   	(2019, 1035)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	325
+			    y_coord    	235
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @31
+			    location   	(2019, 1165)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	90
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @32
+			    location   	(2019, 1848)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	405
+			    y_coord    	315
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @33
+			    location   	(2019, 2058)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	90
+			    y_coord    	0
+			    Nested     	TRUE))
+		    (object InterObjView "Account" @34
+			location   	(2488, 544)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(2488, 544)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Account")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59A92D0E00D9"
+			width      	300
+			height     	2534
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @35
+			    location   	(2488, 624)
+			    line_color 	3342489
+			    InterObjView 	@34
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @36
+			    location   	(2488, 1953)
+			    line_color 	3342489
+			    InterObjView 	@34
+			    height     	195
+			    y_coord    	105
+			    Nested     	FALSE))
+		    (object InterMessView "Insert Card" @37
+			location   	(0, 425)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @38
+			    Parent_View 	@37
+			    location   	(821, 381)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A928760169"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	256
+			    justify    	0
+			    label      	"Insert Card"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@14
+			supplier   	@3
+			Focus_Src  	@15
+			Focus_Entry 	@5
+			origin     	(1037, 425)
+			terminus   	(604, 425)
+			ordinal    	0)
+		    (object InterMessView "Acknowlegdement" @39
+			location   	(0, 660)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @40
+			    Parent_View 	@39
+			    location   	(820, 616)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A9288A009C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	388
+			    justify    	0
+			    label      	"Acknowlegdement"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@5
+			Focus_Entry 	@16
+			origin     	(603, 660)
+			terminus   	(1037, 660)
+			ordinal    	2)
+		    (object InterMessView "Welcome Greeting" @41
+			location   	(0, 765)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @42
+			    Parent_View 	@41
+			    location   	(820, 721)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A928B100AB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	385
+			    justify    	0
+			    label      	"Welcome Greeting"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@7
+			Focus_Entry 	@17
+			origin     	(603, 765)
+			terminus   	(1037, 765)
+			ordinal    	3)
+		    (object InterMessView "Enter PIN" @43
+			location   	(0, 870)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @44
+			    Parent_View 	@43
+			    location   	(821, 826)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92907028D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	232
+			    justify    	0
+			    label      	"Enter PIN"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@14
+			supplier   	@3
+			Focus_Src  	@17
+			Focus_Entry 	@8
+			origin     	(1037, 870)
+			terminus   	(604, 870)
+			ordinal    	4)
+		    (object InterMessView "Verify PIN" @45
+			location   	(0, 1035)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @46
+			    Parent_View 	@45
+			    location   	(1303, 991)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A9291201C2"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	238
+			    justify    	0
+			    label      	"Verify PIN"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@28
+			Focus_Src  	@8
+			Focus_Entry 	@30
+			origin     	(603, 1035)
+			terminus   	(2003, 1035)
+			ordinal    	5)
+		    (object SelfMessView "Pin correct" @47
+			location   	(0, 1140)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @48
+			    Parent_View 	@47
+			    location   	(2110, 1096)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92AA60190"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	256
+			    justify    	0
+			    label      	"Pin correct"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@28
+			supplier   	@28
+			Focus_Src  	@30
+			Focus_Entry 	@31
+			origin     	(2035, 1140)
+			terminus   	(2185, 1140)
+			ordinal    	6)
+		    (object SelfMessView "Card Verification" @49
+			location   	(0, 530)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @50
+			    Parent_View 	@49
+			    location   	(679, 486)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92AB703C2"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	344
+			    justify    	0
+			    label      	"Card Verification"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@3
+			Focus_Src  	@5
+			Focus_Entry 	@6
+			origin     	(604, 530)
+			terminus   	(754, 530)
+			ordinal    	1)
+		    (object InterMessView "PIN Correct" @51
+			location   	(0, 1270)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @52
+			    Parent_View 	@51
+			    location   	(1304, 1226)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A16036B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	268
+			    justify    	0
+			    label      	"PIN Correct"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@28
+			supplier   	@3
+			Focus_Src  	@30
+			Focus_Entry 	@9
+			origin     	(2003, 1270)
+			terminus   	(604, 1270)
+			ordinal    	7)
+		    (object InterMessView "Request option" @53
+			location   	(0, 1375)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @54
+			    Parent_View 	@53
+			    location   	(820, 1331)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A360146"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	330
+			    justify    	0
+			    label      	"Request option"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@9
+			Focus_Entry 	@18
+			origin     	(603, 1375)
+			terminus   	(1037, 1375)
+			ordinal    	8)
+		    (object InterMessView "Option Entered" @55
+			location   	(0, 1480)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @56
+			    Parent_View 	@55
+			    location   	(821, 1436)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A4802EB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	352
+			    justify    	0
+			    label      	"Option Entered"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@14
+			supplier   	@3
+			Focus_Src  	@18
+			Focus_Entry 	@10
+			origin     	(1037, 1480)
+			terminus   	(604, 1480)
+			ordinal    	9)
+		    (object InterMessView "Request Amount" @57
+			location   	(0, 1585)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @58
+			    Parent_View 	@57
+			    location   	(820, 1541)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A5E03D4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	384
+			    justify    	0
+			    label      	"Request Amount"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@10
+			Focus_Entry 	@19
+			origin     	(603, 1585)
+			terminus   	(1037, 1585)
+			ordinal    	10)
+		    (object InterMessView "Amount Entered" @59
+			location   	(0, 1690)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @60
+			    Parent_View 	@59
+			    location   	(821, 1646)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A6C03E3"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	374
+			    justify    	0
+			    label      	"Amount Entered"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@14
+			supplier   	@3
+			Focus_Src  	@19
+			Focus_Entry 	@11
+			origin     	(1037, 1690)
+			terminus   	(604, 1690)
+			ordinal    	11)
+		    (object InterMessView "Process Transaction" @61
+			location   	(0, 1848)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @62
+			    Parent_View 	@61
+			    location   	(1303, 1804)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92A7D0097"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	452
+			    justify    	0
+			    label      	"Process Transaction"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@28
+			Focus_Src  	@11
+			Focus_Entry 	@32
+			origin     	(603, 1848)
+			terminus   	(2003, 1848)
+			ordinal    	12)
+		    (object InterMessView "Transaction Sucessfull" @63
+			location   	(0, 2163)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @64
+			    Parent_View 	@63
+			    location   	(1304, 2119)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92BED0346"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	478
+			    justify    	0
+			    label      	"Transaction Sucessfull"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@28
+			supplier   	@3
+			Focus_Src  	@32
+			Focus_Entry 	@12
+			origin     	(2003, 2163)
+			terminus   	(604, 2163)
+			ordinal    	15)
+		    (object InterMessView "Cash Withdrawal" @65
+			location   	(0, 2268)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @66
+			    Parent_View 	@65
+			    location   	(818, 2225)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92C1103D1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	375
+			    justify    	0
+			    label      	"Cash Withdrawal"
+			    pctDist    	0.496732
+			    height     	44
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@12
+			Focus_Entry 	@20
+			origin     	(603, 2268)
+			terminus   	(1037, 2268)
+			ordinal    	16)
+		    (object InterMessView "Continue" @67
+			location   	(0, 2373)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @68
+			    Parent_View 	@67
+			    location   	(820, 2329)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92C36013F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	228
+			    justify    	0
+			    label      	"Continue"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@12
+			Focus_Entry 	@21
+			origin     	(603, 2373)
+			terminus   	(1037, 2373)
+			ordinal    	17)
+		    (object InterMessView "Terminate" @69
+			location   	(0, 2793)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @70
+			    Parent_View 	@69
+			    location   	(821, 2749)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92C4201BC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	247
+			    justify    	0
+			    label      	"Terminate"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@14
+			supplier   	@3
+			Focus_Src  	@21
+			Focus_Entry 	@13
+			origin     	(1037, 2793)
+			terminus   	(604, 2793)
+			ordinal    	21)
+		    (object InterMessView "Print Reciept" @71
+			location   	(0, 2898)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @72
+			    Parent_View 	@71
+			    location   	(820, 2854)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92C4C0064"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	303
+			    justify    	0
+			    label      	"Print Reciept"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@13
+			Focus_Entry 	@24
+			origin     	(603, 2898)
+			terminus   	(1037, 2898)
+			ordinal    	22)
+		    (object InterMessView "Checking Account" @73
+			location   	(0, 1953)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @74
+			    Parent_View 	@73
+			    location   	(2253, 1909)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92D310118"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	400
+			    justify    	0
+			    label      	"Checking Account"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@28
+			supplier   	@34
+			Focus_Src  	@32
+			Focus_Entry 	@36
+			origin     	(2034, 1953)
+			terminus   	(2472, 1953)
+			ordinal    	13)
+		    (object InterMessView "Account Succfull Checked" @75
+			location   	(0, 2058)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @76
+			    Parent_View 	@75
+			    location   	(2254, 2014)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92D4601F0"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	547
+			    justify    	0
+			    label      	"Account Succfull Checked"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@34
+			supplier   	@28
+			Focus_Src  	@36
+			Focus_Entry 	@33
+			origin     	(2472, 2058)
+			terminus   	(2035, 2058)
+			ordinal    	14)
+		    (object InterMessView "Modifications" @77
+			location   	(0, 2478)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @78
+			    Parent_View 	@77
+			    location   	(1284, 2434)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92E0801D7"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	316
+			    justify    	0
+			    label      	"Modifications"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@14
+			supplier   	@25
+			Focus_Src  	@21
+			Focus_Entry 	@27
+			origin     	(1068, 2478)
+			terminus   	(1500, 2478)
+			ordinal    	18)
+		    (object InterMessView "Terminate" @79
+			location   	(0, 2583)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @80
+			    Parent_View 	@79
+			    location   	(1285, 2539)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92E1A0242"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	247
+			    justify    	0
+			    label      	"Terminate"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@25
+			supplier   	@14
+			Focus_Src  	@27
+			Focus_Entry 	@22
+			origin     	(1500, 2583)
+			terminus   	(1069, 2583)
+			ordinal    	19)
+		    (object InterMessView "Continue" @81
+			location   	(0, 2688)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @82
+			    Parent_View 	@81
+			    location   	(820, 2644)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"59A92E250222"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	228
+			    justify    	0
+			    label      	"Continue"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@3
+			supplier   	@14
+			Focus_Src  	@12
+			Focus_Entry 	@23
+			origin     	(603, 2688)
+			terminus   	(1037, 2688)
+			ordinal    	20)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"59A927280016"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"59A92728001B"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"59A927280014")
+    process_structure 	(object Processes
+	quid       	"59A927280017"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"59A927280019"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"59A927280018"))

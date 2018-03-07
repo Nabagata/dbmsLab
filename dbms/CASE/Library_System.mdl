@@ -1,0 +1,1118 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.3.0407.2800"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5979C8390257"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5979C8390259"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Member"
+		quid       	"5979C8970192"
+		stereotype 	"Actor")
+	    (object Class "NewClass"
+		quid       	"5979C93A00DA"
+		stereotype 	"Actor"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5979C94A01B9"
+			supplier   	"Use Case View::NewClass2"
+			quidu      	"5979C93C02DE")))
+	    (object Class "NewClass2"
+		quid       	"5979C93C02DE"
+		stereotype 	"Actor")
+	    (object Class "Librarian"
+		quid       	"5979CAA2009A"
+		stereotype 	"Actor")
+	    (object UseCase "Show ID Card"
+		quid       	"5979C8B90266")
+	    (object UseCase "Collect Library card"
+		quid       	"5979C8BE0229")
+	    (object UseCase "Fill new Book details"
+		quid       	"5979C8C1014E")
+	    (object UseCase "Collect receipt"
+		quid       	"5979C8C401AC")
+	    (object UseCase "Pay Fine"
+		quid       	"5979C8CC0110")
+	    (object UseCase "Renew old books"
+		quid       	"5979CA150229")
+	    (object UseCase "Verify Dress Code"
+		quid       	"5979CADA02B2")
+	    (object UseCase "Verification"
+		quid       	"5979CADE0226")
+	    (object UseCase "Verify books torn or good"
+		quid       	"5979CAEE00C1")
+	    (object UseCase "Verify Book Details"
+		quid       	"5979CB2001CB")
+	    (object UseCase "Impose Fine"
+		quid       	"5979CBB101FA")
+	    (object UseCase "Collect Fine"
+		quid       	"5979CBD4022A")
+	    (object UseCase "print Receipt"
+		quid       	"5979CBE303C1")
+	    (object Association "$UNNAMED$0"
+		quid       	"5979CA560271"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5979CA58001B"
+			supplier   	"Use Case View::Show ID Card"
+			quidu      	"5979C8B90266"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5979CA58001D"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5979CA5A02EA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5979CA5B01DC"
+			supplier   	"Use Case View::Collect Library card"
+			quidu      	"5979C8BE0229"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5979CA5B01DE"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5979CA620103"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5979CA6300C5"
+			supplier   	"Use Case View::Fill new Book details"
+			quidu      	"5979C8C1014E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5979CA6300C7"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5979CA6F01B9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5979CA760363"
+			supplier   	"Use Case View::Collect receipt"
+			quidu      	"5979C8C401AC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5979CA760365"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$12"
+		quid       	"5979CA7B03C1"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5979CA7F01E2"
+			supplier   	"Use Case View::Collect receipt"
+			quidu      	"5979C8C401AC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5979CA7F01E4"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$15"
+		quid       	"5979CA84028E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5979CA860240"
+			supplier   	"Use Case View::Pay Fine"
+			quidu      	"5979C8CC0110"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5979CA860242"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$18"
+		quid       	"5979CA89034A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"5979CA8B012D"
+			supplier   	"Use Case View::Renew old books"
+			quidu      	"5979CA150229"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"5979CA8B012F"
+			supplier   	"Use Case View::Member"
+			quidu      	"5979C8970192")))
+	    (object Association "$UNNAMED$21"
+		quid       	"5979CC18023F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5979CC1902DB"
+			supplier   	"Use Case View::Verification"
+			quidu      	"5979CADE0226"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5979CC1902DD"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$24"
+		quid       	"5979CC1C0230"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"5979CC1D031A"
+			supplier   	"Use Case View::Verify books torn or good"
+			quidu      	"5979CAEE00C1"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"5979CC1D031C"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$27"
+		quid       	"5979CC1F0388"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"5979CC2B03B7"
+			supplier   	"Use Case View::Impose Fine"
+			quidu      	"5979CBB101FA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"5979CC2B03B9"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$30"
+		quid       	"5979CC31007B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"5979CC3B0260"
+			supplier   	"Use Case View::Verify Book Details"
+			quidu      	"5979CB2001CB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"5979CC3B026F"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$33"
+		quid       	"5979CC4101C3"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"5979CC4600AA"
+			supplier   	"Use Case View::Impose Fine"
+			quidu      	"5979CBB101FA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"5979CC4600AC"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$36"
+		quid       	"5979CC4D0250"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"5979CC4F01B4"
+			supplier   	"Use Case View::Collect Fine"
+			quidu      	"5979CBD4022A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"5979CC4F01B6"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A")))
+	    (object Association "$UNNAMED$39"
+		quid       	"5979CC5603E7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"5979CC580241"
+			supplier   	"Use Case View::print Receipt"
+			quidu      	"5979CBE303C1"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"5979CC580243"
+			supplier   	"Use Case View::Librarian"
+			quidu      	"5979CAA2009A"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5979C8390268"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Show ID Card" @1
+			location   	(900, 291)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(900, 429)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Show ID Card")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979C8B90266"
+			height     	118)
+		    (object UseCaseView "Use Case View::Collect Library card" @2
+			location   	(916, 625)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(916, 763)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Collect Library card")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979C8BE0229"
+			height     	118)
+		    (object UseCaseView "Use Case View::Fill new Book details" @3
+			location   	(922, 963)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(922, 1101)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Fill new Book details")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979C8C1014E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Collect receipt" @4
+			location   	(918, 1358)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(918, 1496)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Collect receipt")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979C8C401AC"
+			height     	118)
+		    (object UseCaseView "Use Case View::Pay Fine" @5
+			location   	(909, 1702)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(909, 1840)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Pay Fine")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979C8CC0110"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Member" @6
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(148, 962)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(148, 1122)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	347
+			    justify    	0
+			    label      	"Member")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5979C8970192"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @7
+			location   	(488, 655)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA560271"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @8
+				Parent_View 	@7
+				location   	(141, -414)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA58001B"
+				client     	@7
+				supplier   	@1
+				vertices   	(list Points
+				    (488, 655)
+				    (771, 405))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @9
+				Parent_View 	@7
+				location   	(141, -414)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA58001D"
+				client     	@7
+				supplier   	@6
+				vertices   	(list Points
+				    (488, 655)
+				    (205, 906))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @10
+			location   	(469, 817)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA5A02EA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @11
+				Parent_View 	@10
+				location   	(122, -252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA5B01DC"
+				client     	@10
+				supplier   	@2
+				vertices   	(list Points
+				    (469, 817)
+				    (734, 703))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @12
+				Parent_View 	@10
+				location   	(122, -252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA5B01DE"
+				client     	@10
+				supplier   	@6
+				vertices   	(list Points
+				    (469, 817)
+				    (205, 932))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @13
+			location   	(508, 961)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA620103"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @14
+				Parent_View 	@13
+				location   	(161, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA6300C5"
+				client     	@13
+				supplier   	@3
+				vertices   	(list Points
+				    (508, 961)
+				    (811, 961))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @15
+				Parent_View 	@13
+				location   	(161, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA6300C7"
+				client     	@13
+				supplier   	@6
+				vertices   	(list Points
+				    (508, 961)
+				    (205, 962))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @16
+			location   	(506, 1145)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA7B03C1"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @17
+				Parent_View 	@16
+				location   	(159, 76)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA7F01E2"
+				client     	@16
+				supplier   	@4
+				vertices   	(list Points
+				    (506, 1145)
+				    (807, 1300))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @18
+				Parent_View 	@16
+				location   	(159, 76)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA7F01E4"
+				client     	@16
+				supplier   	@6
+				vertices   	(list Points
+				    (506, 1145)
+				    (205, 990))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @19
+			location   	(537, 1340)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA84028E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @20
+				Parent_View 	@19
+				location   	(190, 271)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA860240"
+				client     	@19
+				supplier   	@5
+				vertices   	(list Points
+				    (537, 1340)
+				    (848, 1643))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @21
+				Parent_View 	@19
+				location   	(190, 271)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA860242"
+				client     	@19
+				supplier   	@6
+				vertices   	(list Points
+				    (537, 1340)
+				    (226, 1038))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Renew old books" @22
+			location   	(912, 2028)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(912, 2166)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Renew old books")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CA150229"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$18" @23
+			location   	(547, 1521)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CA89034A"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @24
+				Parent_View 	@23
+				location   	(200, 452)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA8B012D"
+				client     	@23
+				supplier   	@22
+				vertices   	(list Points
+				    (547, 1521)
+				    (868, 1968))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @25
+				Parent_View 	@23
+				location   	(200, 452)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CA8B012F"
+				client     	@23
+				supplier   	@6
+				vertices   	(list Points
+				    (547, 1521)
+				    (226, 1074))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Verification" @26
+			location   	(3289, 353)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@26
+			    location   	(3289, 491)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Verification")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CADE0226"
+			height     	118)
+		    (object UseCaseView "Use Case View::Verify books torn or good" @27
+			location   	(3297, 731)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@27
+			    location   	(3297, 869)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Verify books torn or good")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CAEE00C1"
+			height     	118)
+		    (object UseCaseView "Use Case View::Verify Book Details" @28
+			location   	(3309, 1043)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(3309, 1181)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Verify Book Details")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CB2001CB"
+			height     	118)
+		    (object UseCaseView "Use Case View::Impose Fine" @29
+			location   	(3313, 1343)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@29
+			    location   	(3313, 1481)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Impose Fine")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CBB101FA"
+			height     	118)
+		    (object UseCaseView "Use Case View::Collect Fine" @30
+			location   	(3319, 1661)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@30
+			    location   	(3319, 1799)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Collect Fine")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CBD4022A"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Librarian" @31
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(4226, 1040)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@31
+			    location   	(4226, 1200)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	358
+			    justify    	0
+			    label      	"Librarian")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5979CAA2009A"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$21" @32
+			location   	(3779, 710)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC18023F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @33
+				Parent_View 	@32
+				location   	(-394, -236)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC1902DB"
+				client     	@32
+				supplier   	@26
+				vertices   	(list Points
+				    (3779, 710)
+				    (3391, 426))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @34
+				Parent_View 	@32
+				location   	(-394, -236)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC1902DD"
+				client     	@32
+				supplier   	@31
+				vertices   	(list Points
+				    (3779, 710)
+				    (4167, 995))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @35
+			location   	(3846, 910)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC1C0230"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @36
+				Parent_View 	@35
+				location   	(-327, -36)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC1D031A"
+				client     	@35
+				supplier   	@27
+				vertices   	(list Points
+				    (3846, 910)
+				    (3525, 804))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @37
+				Parent_View 	@35
+				location   	(-327, -36)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC1D031C"
+				client     	@35
+				supplier   	@31
+				vertices   	(list Points
+				    (3846, 910)
+				    (4167, 1017))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$30" @38
+			location   	(3792, 1039)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC31007B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @39
+				Parent_View 	@38
+				location   	(-381, 93)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC3B0260"
+				client     	@38
+				supplier   	@28
+				vertices   	(list Points
+				    (3792, 1039)
+				    (3417, 1039))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @40
+				Parent_View 	@38
+				location   	(-381, 93)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC3B026F"
+				client     	@38
+				supplier   	@31
+				vertices   	(list Points
+				    (3792, 1039)
+				    (4167, 1040))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @41
+			location   	(3794, 1180)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC4101C3"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @42
+				Parent_View 	@41
+				location   	(-379, 234)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC4600AA"
+				client     	@41
+				supplier   	@29
+				vertices   	(list Points
+				    (3794, 1180)
+				    (3421, 1304))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @43
+				Parent_View 	@41
+				location   	(-379, 234)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC4600AC"
+				client     	@41
+				supplier   	@31
+				vertices   	(list Points
+				    (3794, 1180)
+				    (4167, 1056))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$36" @44
+			location   	(3782, 1339)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC4D0250"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @45
+				Parent_View 	@44
+				location   	(-391, 393)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC4F01B4"
+				client     	@44
+				supplier   	@30
+				vertices   	(list Points
+				    (3782, 1339)
+				    (3398, 1602))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @46
+				Parent_View 	@44
+				location   	(-391, 393)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC4F01B6"
+				client     	@44
+				supplier   	@31
+				vertices   	(list Points
+				    (3782, 1339)
+				    (4167, 1077))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::print Receipt" @47
+			location   	(3319, 1983)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@47
+			    location   	(3319, 2121)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"print Receipt")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5979CBE303C1"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$39" @48
+			location   	(3768, 1510)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5979CC5603E7"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @49
+				Parent_View 	@48
+				location   	(-405, 564)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC580241"
+				client     	@48
+				supplier   	@47
+				vertices   	(list Points
+				    (3768, 1510)
+				    (3370, 1925))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @50
+				Parent_View 	@48
+				location   	(-405, 564)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5979CC580243"
+				client     	@48
+				supplier   	@31
+				vertices   	(list Points
+				    (3768, 1510)
+				    (4167, 1096))
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5979C8390258"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5979C839025A"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5979C839025E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5979C839025A"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5979C8390267"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"5979C8390258")
+    process_structure 	(object Processes
+	quid       	"5979C839025B"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5979C839025D"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5979C839025C"))
